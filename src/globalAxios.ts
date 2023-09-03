@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 // Set the base URL or other default settings
-axios.defaults.baseURL = 'https://api.spotify.com/v1'
+axios.defaults.baseURL = 'https://api.ipdata.co'
 
 // 添加请求拦截器
 axios.interceptors.request.use(

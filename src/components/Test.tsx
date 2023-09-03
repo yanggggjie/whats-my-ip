@@ -1,26 +1,9 @@
-import { Suspense, useEffect, useState } from 'react'
+import { clsx } from 'clsx'
+import _ from 'lodash-es'
+interface Props {}
 
-function Sub({ count }: { count: number }) {
-  return <div>count is {count}</div>
+function Component({}: Props) {
+  return <div></div>
 }
-const App = () => {
-  const [count, setCount] = useState(0)
 
-  useEffect(() => {
-    setInterval(() => {
-      setCount((count) => {
-        return count + 1
-      })
-    }, 10000)
-  }, [])
-
-  return (
-    <>
-      <Suspense fallback={<div>loading...</div>}>
-        <Sub count={count} />
-      </Suspense>
-      <div>count is {count}</div>
-    </>
-  )
-}
-export default App
+export default Component

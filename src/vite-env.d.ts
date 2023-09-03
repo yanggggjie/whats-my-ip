@@ -2,6 +2,7 @@
 
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string
+  readonly VITE_IPDATA_KEY: string
   // 更多环境变量...
 }
 

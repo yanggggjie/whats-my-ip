@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import { SWRConfig } from 'swr'
-import axios from 'axios'
+import globalAxios from './globalAxios.ts'
 import { BrowserRouter } from 'react-router-dom'
 
 export function sortQuery(url: string) {
@@ -23,7 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
            ! make sure different query string order has the same cache key
            */
           try {
-            const res = await axios.get(sortQuery(url))
+            const res = await globalAxios.get(sortQuery(url))
             return res.data
           } catch (e) {
             console.log('error in fetcher')
