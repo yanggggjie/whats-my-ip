@@ -1,7 +1,5 @@
 import { clsx } from 'clsx'
 import _ from 'lodash-es'
-import Test from './components/Test.tsx'
-import Copy from './components/Copy.tsx'
 import Map from './components/Map/Map.tsx'
 import Info from './components/Info.tsx'
 import useSWR from 'swr'
